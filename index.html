@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rana Samiuddin | SQA Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Rana Samiuddin, an experienced SQA Engineer specializing in Manual Testing, API Testing, Database Testing, and Automation Testing using Playwright, TypeScript, and Selenium.">
+  <meta name="keywords" content="Rana Samiuddin, SQA Engineer, Software Quality Assurance, Automation Testing, Playwright, TypeScript, Manual Testing, Postman, API Testing, SQL, JIRA, QA Portfolio">
+  <meta name="author" content="Rana Samiuddin">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rana Samiuddin | SQA Engineer Portfolio">
+  <meta property="og:description" content="Explore the portfolio of Rana Samiuddin, Jr. SQA Engineer. Featuring interactive SQA test runs, automation showcases, and a downloadable ATS resume.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1618401471353-b98aedd07871?auto=format&fit=crop&w=1200&h=630&q=80">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Rana Samiuddin | SQA Engineer Portfolio">
+  <meta property="twitter:description" content="Explore the portfolio of Rana Samiuddin, Jr. SQA Engineer. Featuring interactive SQA test runs, automation showcases, and a downloadable ATS resume.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css?v=1.5">
+</head>
+<body class="dark-theme">
+  <!-- Dynamic Grid Background -->
+  <div class="grid-background" id="grid-bg"></div>
+
+  <!-- Custom Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-code">&lt;</span>RS<span class="logo-text">.QA</span><span class="logo-code">/&gt;</span>
+      </a>
+      
+      <nav class="nav-links" id="nav-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#tech-stack" class="nav-link">Tech Stack</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <button class="btn btn-primary nav-cta-btn" onclick="window.print()">Print CV</button>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle Switch -->
+        <button class="theme-toggle" id="theme-btn" aria-label="Toggle dark/light theme">
+          <i data-lucide="moon" class="icon-moon"></i>
+          <i data-lucide="sun" class="icon-sun"></i>
+        </button>
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle navigation menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Hero Section -->
+    <section class="section hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-status-container">
+            <span class="badge-status">
+              <span class="status-dot animate-pulse"></span>
+              Available for Hire
+            </span>
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="text-gradient">Rana Samiuddin</span>
+          </h1>
+          <h2 class="hero-subtitle">Software Quality Assurance (SQA) Engineer</h2>
+          <p class="hero-description">
+            Passionate SQA Engineer with 1.5+ years of experience specialized in functional testing, automation frameworks, and API verification. I bridge the gap between development and reliability by writing robust automated tests, debugging complex workflows, and ensuring that software builds are stable and secure.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">
+              <i data-lucide="mail"></i> Contact Me
+            </a>
+            <button class="btn btn-secondary" onclick="window.print()">
+              <i data-lucide="download"></i> Download Resume
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-card-wrapper">
+            <div class="avatar-glow"></div>
+            <div class="avatar-card">
+              <!-- QA Scanner Animation Visual Overlay -->
+              <div class="scanner-line"></div>
+              <div class="avatar-status-badge">
+                <i data-lucide="check-circle" class="badge-icon"></i> QA PASSED
+              </div>
+              
+              <!-- SVG Avatar Vector Placeholder -->
+              <svg class="avatar-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="avatar-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="var(--primary)" />
+                    <stop offset="100%" stop-color="var(--accent)" />
+                  </linearGradient>
+                  <clipPath id="circle-clip">
+                    <circle cx="50" cy="50" r="46" />
+                  </clipPath>
+                </defs>
+                <circle cx="50" cy="50" r="48" fill="none" stroke="url(#avatar-grad)" stroke-width="2" stroke-dasharray="6 3" />
+                <g clip-path="url(#circle-clip)">
+                  <!-- Background Pattern -->
+                  <rect x="0" y="0" width="100" height="100" fill="var(--surface-dark)" />
+                  <path d="M 0,20 L 100,20 M 0,40 L 100,40 M 0,60 L 100,60 M 0,80 L 100,80" stroke="var(--grid-color)" stroke-width="0.5" />
+                  <path d="M 20,0 L 20,100 M 40,0 L 40,100 M 60,0 L 60,100 M 80,0 L 80,100" stroke="var(--grid-color)" stroke-width="0.5" />
+                  
+                  <!-- Abstract character avatar silhouette -->
+                  <circle cx="50" cy="38" r="18" fill="url(#avatar-grad)" opacity="0.85" />
+                  <path d="M 20,85 C 20,68 35,62 50,62 C 65,62 80,68 80,85 Z" fill="url(#avatar-grad)" />
+                  
+                  <!-- Overlay styling -->
+                  <circle cx="50" cy="50" r="46" fill="var(--primary)" opacity="0.05" />
+                </g>
+              </svg>
+              <div class="avatar-labels">
+                <span class="label-name">Rana Samiuddin</span>
+                <span class="label-title">Jr. SQA Engineer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SQA Experience Highlights Section (Stats) -->
+    <section class="section stats-section">
+      <div class="container stats-container">
+        <div class="stat-card" data-stat-target="1.5">
+          <div class="stat-icon-wrapper text-gradient-bg">
+            <i data-lucide="clock"></i>
+          </div>
+          <div class="stat-details">
+            <div class="stat-number-wrapper">
+              <span class="stat-number" id="stat-years">0</span><span class="stat-plus">+</span>
+            </div>
+            <span class="stat-label">Years of Experience</span>
+          </div>
+        </div>
+        
+        <div class="stat-card" data-stat-target="15">
+          <div class="stat-icon-wrapper text-gradient-bg">
+            <i data-lucide="folder-check"></i>
+          </div>
+          <div class="stat-details">
+            <div class="stat-number-wrapper">
+              <span class="stat-number" id="stat-projects">0</span><span class="stat-plus">+</span>
+            </div>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+        </div>
+
+        <div class="stat-card" data-stat-target="5000">
+          <div class="stat-icon-wrapper text-gradient-bg">
+            <i data-lucide="check-square"></i>
+          </div>
+          <div class="stat-details">
+            <div class="stat-number-wrapper">
+              <span class="stat-number" id="stat-cases">0</span><span class="stat-plus">+</span>
+            </div>
+            <span class="stat-label">Test Cases Executed</span>
+          </div>
+        </div>
+
+        <div class="stat-card" data-stat-target="250">
+          <div class="stat-icon-wrapper text-gradient-bg">
+            <i data-lucide="bug"></i>
+          </div>
+          <div class="stat-details">
+            <div class="stat-number-wrapper">
+              <span class="stat-number" id="stat-bugs">0</span><span class="stat-plus">+</span>
+            </div>
+            <span class="stat-label">Bugs Logged & Verified</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. QA Console Interactive Sandbox Section -->
+    <section class="section console-section">
+      <div class="container">
+        <div class="section-header align-center">
+          <h2 class="section-title">Interactive QA Test Runner</h2>
+          <p class="section-subtitle">Simulate real automated tests against my profile parameters</p>
+        </div>
+        
+        <div class="terminal-wrapper">
+          <div class="terminal-header">
+            <div class="terminal-buttons">
+              <span class="term-dot close"></span>
+              <span class="term-dot minimize"></span>
+              <span class="term-dot maximize"></span>
+            </div>
+            <div class="terminal-title">playwright-runner.spec.ts</div>
+            <div class="terminal-badge"><span class="badge-dot pulse-green"></span>CONNECTED</div>
+          </div>
+          
+          <div class="terminal-body" id="console-body">
+            <div class="console-line text-muted">// Click a suite below to run assertions against Rana's qualifications</div>
+            <div class="console-line prompt">rana-samiuddin-qa ~ % <span class="typing-placeholder">Select a test suite below...</span></div>
+          </div>
+          
+          <div class="terminal-footer">
+            <button class="btn btn-console active" id="run-smoke-btn" onclick="runConsoleSuite('smoke')">
+              <i data-lucide="play" class="btn-console-icon"></i> Run Smoke Tests
+            </button>
+            <button class="btn btn-console" id="run-api-btn" onclick="runConsoleSuite('api')">
+              <i data-lucide="play" class="btn-console-icon"></i> Run API Suite
+            </button>
+            <button class="btn btn-console" id="run-regression-btn" onclick="runConsoleSuite('regression')">
+              <i data-lucide="play" class="btn-console-icon"></i> Run Regression Suite
+            </button>
+            <button class="btn btn-console btn-console-clear" onclick="clearConsole()">
+              <i data-lucide="trash-2" class="btn-console-icon"></i> Clear Logs
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. About Me Section -->
+    <section class="section about-section" id="about">
+      <div class="container about-container">
+        <div class="about-visual">
+          <div class="about-glow-box">
+            <div class="interactive-checklist">
+              <div class="checklist-header">
+                <i data-lucide="clipboard-list"></i> QA Standards Checklist
+              </div>
+              <div class="checklist-items">
+                <div class="checklist-item done">
+                  <i data-lucide="check-square"></i>
+                  <span>Requirement Traceability Matrix (RTM)</span>
+                </div>
+                <div class="checklist-item done">
+                  <i data-lucide="check-square"></i>
+                  <span>End-to-End Automation Scripts</span>
+                </div>
+                <div class="checklist-item done">
+                  <i data-lucide="check-square"></i>
+                  <span>Smoke & Sanity Test Verification</span>
+                </div>
+                <div class="checklist-item done">
+                  <i data-lucide="check-square"></i>
+                  <span>Detailed Defect Bug Reports</span>
+                </div>
+                <div class="checklist-item done">
+                  <i data-lucide="check-square"></i>
+                  <span>Cross-browser responsive UI tests</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="section-header">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Delivering stable builds & flawless user experiences</p>
+          </div>
+          <p class="about-text">
+            I am a Software Quality Assurance (SQA) Engineer with a total of **1 year and 5+ months of experience** in the software industry. I have worked closely with developers and product managers to improve overall application quality by detecting bugs early in the Software Development Life Cycle (SDLC).
+          </p>
+          <p class="about-text">
+            My experience spans across both **Manual Testing** (writing functional, regression, smoke, integration, database, and system test cases) and **Automation Testing** (building maintainable test scripts using Playwright and basic Selenium). I am passionate about optimizing QA processes, troubleshooting failures, and ensuring final applications match performance requirements.
+          </p>
+          <div class="about-features">
+            <div class="feature-badge"><i data-lucide="zap"></i> Fast Learner</div>
+            <div class="feature-badge"><i data-lucide="target"></i> Detail-Oriented</div>
+            <div class="feature-badge"><i data-lucide="git-pull-request"></i> Agile Collaborator</div>
+            <div class="feature-badge"><i data-lucide="cpu"></i> Tech-driven Approach</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Work Experience Section -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header align-center">
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-subtitle">My professional journey in Software Quality Assurance</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Experience Card 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="job-title text-gradient">Associate SQA Engineer</h3>
+                  <h4 class="company-name">Tafsol Pvt Ltd.</h4>
+                </div>
+                <span class="timeline-date"><i data-lucide="calendar"></i> Aug 2025 – Present</span>
+              </div>
+              <ul class="job-duties">
+                <li>Continuously work on enhancing application quality by about **20%** through in-depth functional and non-functional testing.</li>
+                <li>Consistently achieve around **95% stability** in builds by catching critical bugs early in the development cycle.</li>
+                <li>Carry out detailed testing across mobile (Android & iOS) and web platforms, including UI, admin dashboards, and vendor environments.</li>
+                <li>Design and execute comprehensive end-to-end test scenarios to maintain application performance, responsiveness, and reliability.</li>
+                <li>Collaborate closely with developers to resolve bugs faster, streamlining release cycles and improving user experience.</li>
+                <li>Manage QA activities across multiple concurrent projects, increasing test coverage and minimizing production defects.</li>
+              </ul>
+              <div class="job-tags">
+                <span class="tag">App Testing</span>
+                <span class="tag">Web Testing</span>
+                <span class="tag">Bug Tracking</span>
+                <span class="tag">SDLC</span>
+                <span class="tag">Agile</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Card 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="job-title">SQA Analyst</h3>
+                  <h4 class="company-name">MMC</h4>
+                </div>
+                <span class="timeline-date"><i data-lucide="calendar"></i> Mar 2025 – Jul 2025</span>
+              </div>
+              <ul class="job-duties">
+                <li>Improved overall application quality by **20%** through thorough functional, system, and regression test sweeps.</li>
+                <li>Achieved **95% success** in delivering stable software builds by identifying potential blockers early in the SDLC.</li>
+                <li>Conducted targeted responsive testing across mobile (Android/iOS) and web environments, including admin portals.</li>
+                <li>Designed, updated, and executed end-to-end test cases ensuring consistent UX across target devices.</li>
+                <li>Collaborated with dev teams to resolve blockers quickly, reducing ticket resolution time and boosting user satisfaction.</li>
+                <li>Managed QA efforts across active project boards, keeping production defects to an absolute minimum.</li>
+              </ul>
+              <div class="job-tags">
+                <span class="tag">Regression Testing</span>
+                <span class="tag">Test Cases</span>
+                <span class="tag">Functional Testing</span>
+                <span class="tag">Jira</span>
+                <span class="tag">Collaboration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Skills Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header align-center">
+          <h2 class="section-title">Skills & Expertise</h2>
+          <p class="section-subtitle">My technical stack and software testing specialties</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Category 1: Manual Testing -->
+          <div class="skill-card card">
+            <div class="skill-card-header">
+              <i data-lucide="file-text" class="skill-icon text-gradient"></i>
+              <h3>Manual Testing</h3>
+            </div>
+            <ul class="skill-list">
+              <li>
+                <span>Functional & UI Testing</span>
+                <div class="progress-bar"><div class="progress" style="width: 95%"></div></div>
+              </li>
+              <li>
+                <span>Regression Testing</span>
+                <div class="progress-bar"><div class="progress" style="width: 92%"></div></div>
+              </li>
+              <li>
+                <span>Smoke & Sanity Testing</span>
+                <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+              </li>
+              <li>
+                <span>Integration & System Testing</span>
+                <div class="progress-bar"><div class="progress" style="width: 88%"></div></div>
+              </li>
+              <li>
+                <span>User Acceptance Testing (UAT)</span>
+                <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Skill Category 2: Automation Testing -->
+          <div class="skill-card card">
+            <div class="skill-card-header">
+              <i data-lucide="terminal" class="skill-icon text-gradient"></i>
+              <h3>Automation Testing</h3>
+            </div>
+            <ul class="skill-list">
+              <li>
+                <span>Playwright Framework</span>
+                <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+              </li>
+              <li>
+                <span>TypeScript / JavaScript</span>
+                <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+              </li>
+              <li>
+                <span>Selenium WebDriver (Basic)</span>
+                <div class="progress-bar"><div class="progress" style="width: 65%"></div></div>
+              </li>
+              <li>
+                <span>BDD / SpecFlow (Boot camp)</span>
+                <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
+              </li>
+              <li>
+                <span>C# & NUnit (Boot camp)</span>
+                <div class="progress-bar"><div class="progress" style="width: 60%"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Skill Category 3: API & Database -->
+          <div class="skill-card card">
+            <div class="skill-card-header">
+              <i data-lucide="database" class="skill-icon text-gradient"></i>
+              <h3>API & Database Testing</h3>
+            </div>
+            <ul class="skill-list">
+              <li>
+                <span>Postman API Testing</span>
+                <div class="progress-bar"><div class="progress" style="width: 88%"></div></div>
+              </li>
+              <li>
+                <span>REST API Verification</span>
+                <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+              </li>
+              <li>
+                <span>SQL Query Design</span>
+                <div class="progress-bar"><div class="progress" style="width: 82%"></div></div>
+              </li>
+              <li>
+                <span>MySQL Relational Databases</span>
+                <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+              </li>
+              <li>
+                <span>JMeter Performance (Basic)</span>
+                <div class="progress-bar"><div class="progress" style="width: 60%"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Skill Category 4: Tools & Methodologies -->
+          <div class="skill-card card">
+            <div class="skill-card-header">
+              <i data-lucide="settings" class="skill-icon text-gradient"></i>
+              <h3>Process & Tracking</h3>
+            </div>
+            <ul class="skill-list">
+              <li>
+                <span>Jira Bug Tracking</span>
+                <div class="progress-bar"><div class="progress" style="width: 92%"></div></div>
+              </li>
+              <li>
+                <span>Azure DevOps Board</span>
+                <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+              </li>
+              <li>
+                <span>Git & GitHub Workflows</span>
+                <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+              </li>
+              <li>
+                <span>Agile Scrum Framework</span>
+                <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+              </li>
+              <li>
+                <span>CI/CD Pipelines (Conceptual)</span>
+                <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Tech Stack Section -->
+    <section class="section techstack-section" id="tech-stack">
+      <div class="container">
+        <div class="section-header align-center">
+          <h2 class="section-title">Tech Stack</h2>
+          <p class="section-subtitle">A professional overview of the technologies and frameworks I’ve worked with across web and software projects</p>
+        </div>
+
+        <div class="techstack-grid">
+          <div class="techstack-card card">
+            <div class="techstack-icon">
+              <i data-lucide="globe-2"></i>
+            </div>
+            <div class="techstack-label">CMS & Web Platforms</div>
+            <h3>WordPress</h3>
+            <p>Built and maintained content-driven websites with custom themes, plugins, and responsive layouts.</p>
+            <div class="techstack-tags">
+              <span class="techstack-tag">CMS</span>
+              <span class="techstack-tag">Themes</span>
+              <span class="techstack-tag">Plugins</span>
+            </div>
+          </div>
+
+          <div class="techstack-card card">
+            <div class="techstack-icon">
+              <i data-lucide="code-2"></i>
+            </div>
+            <div class="techstack-label">Frontend & Backend JavaScript</div>
+            <h3>JavaScript Ecosystem</h3>
+            <p>Experienced with React, Node.js, NestJS, and Next.js for modern web applications and APIs.</p>
+            <div class="techstack-tags">
+              <span class="techstack-tag">React</span>
+              <span class="techstack-tag">Node.js</span>
+              <span class="techstack-tag">NestJS</span>
+              <span class="techstack-tag">Next.js</span>
+            </div>
+          </div>
+
+          <div class="techstack-card card">
+            <div class="techstack-icon">
+              <i data-lucide="cpu"></i>
+            </div>
+            <div class="techstack-label">Backend & Automation</div>
+            <h3>Python</h3>
+            <p>Used for scripting, automation, and backend-oriented development tasks with a strong focus on reliability.</p>
+            <div class="techstack-tags">
+              <span class="techstack-tag">Scripting</span>
+              <span class="techstack-tag">Automation</span>
+              <span class="techstack-tag">Backend</span>
+            </div>
+          </div>
+
+          <div class="techstack-card card">
+            <div class="techstack-icon">
+              <i data-lucide="layers"></i>
+            </div>
+            <div class="techstack-label">PHP Frameworks</div>
+            <h3>Laravel</h3>
+            <p>Developed structured web applications with clean architecture, routing, and maintainable backend logic.</p>
+            <div class="techstack-tags">
+              <span class="techstack-tag">PHP</span>
+              <span class="techstack-tag">MVC</span>
+              <span class="techstack-tag">APIs</span>
+            </div>
+          </div>
+
+          <div class="techstack-card card">
+            <div class="techstack-icon">
+              <i data-lucide="panel-top"></i>
+            </div>
+            <div class="techstack-label">Core Web Technologies</div>
+            <h3>HTML, CSS & JavaScript</h3>
+            <p>Strong foundation in semantic HTML, responsive CSS, and interactive JavaScript for polished user interfaces.</p>
+            <div class="techstack-tags">
+              <span class="techstack-tag">HTML5</span>
+              <span class="techstack-tag">CSS3</span>
+              <span class="techstack-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Tools and Technologies Section -->
+    <section class="section tools-section">
+      <div class="container">
+        <div class="section-header align-center">
+          <h2 class="section-title">Tools & Technologies</h2>
+          <p class="section-subtitle">Core testing engines, tracking software, and mobile simulation platforms I use daily</p>
+        </div>
+        
+        <div class="tools-grid">
+          <!-- 1. Playwright -->
+          <div class="tool-item" title="Playwright">
+            <svg class="tool-logo text-gradient" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+              <line x1="2" y1="10" x2="22" y2="10" />
+              <polygon points="10 13 15 15 10 17 10 13" fill="currentColor"/>
+              <path d="M6 6h.01M10 6h.01M14 6h.01"/>
+            </svg>
+            <span>Playwright</span>
+          </div>
+
+          <!-- 2. Selenium -->
+          <div class="tool-item" title="Selenium">
+            <svg class="tool-logo" viewBox="0 0 24 24" fill="none" stroke="#00B129" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              <text x="12" y="16.5" font-size="7" font-weight="bold" font-family="sans-serif" text-anchor="middle" fill="#00B129" stroke="none">Se</text>
+            </svg>
+            <span>Selenium</span>
+          </div>
+
+          <!-- 3. Postman -->
+          <div class="tool-item" title="Postman">
+            <svg class="tool-logo" viewBox="0 0 24 24" fill="none" stroke="#ef5b24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 16.5c-1.5 1.5-2.5 3.5-2.5 5.5C4 22 6 21 7.5 19.5" />
+              <path d="M12 2C6 2 2 6 2 12c0 1.5.5 3 1.5 4.5L8 12c.5-.5 1-.5 1.5 0s.5 1 0 1.5l-4.5 4.5c1.5 1 3 1.5 4.5 1.5 6 0 10-4 10-10 0-6-4-10-10-10z" />
+              <circle cx="12" cy="8" r="1.5" fill="#ef5b24"/>
+            </svg>
+            <span>Postman</span>
+          </div>
+
+          <!-- 4. JMeter -->
+          <div class="tool-item" title="Apache JMeter">
+            <svg class="tool-logo" viewBox="0 0 24 24" fill="none" stroke="#E53935" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12a9 9 0 0 1 15-6.7M21 12a9 9 0 0 1-15 6.7" />
+              <circle cx="12" cy="12" r="2" />
+              <line x1="12" y1="12" x2="16" y2="8" stroke-width="2.5" />
+              <path d="M12 2v2M12 20v2M20 12h2M2 12h2" />
+            </svg>
+            <span>Apache JMeter</span>
+          </div>
+
+          <!-- 5. JIRA -->
+          <div class="tool-item" title="Jira Software">
+            <svg class="tool-logo" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M11.5 12.5L16.2 7.8C16.8 7.2 17.8 7.2 18.4 7.8L21.5 10.9C22.1 11.5 22.1 12.5 21.5 13.1L13.1 21.5C12.5 22.1 11.5 22.1 10.9 21.5L7.8 18.4C7.2 17.8 7.2 16.8 7.8 16.2L11.5 12.5Z" fill="#0052CC"/>
+              <path d="M4.5 12.5L9.2 7.8C9.8 7.2 10.8 7.2 11.4 7.8L14.5 10.9C15.1 11.5 15.1 12.5 14.5 13.1L6.1 21.5C5.5 22.1 4.5 22.1 3.9 21.5L0.8 18.4C0.2 17.8 0.2 16.8 0.8 16.2L4.5 12.5Z" fill="#2684FF"/>
+            </svg>
+            <span>Jira Software</span>
+          </div>
+
+          <!-- 6. GitHub -->
+          <div class="tool-item" title="GitHub">
+            <svg class="tool-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+            <span>GitHub</span>
+          </div>
+
+          <!-- 7. Emulators -->
+          <div class="tool-item" title="Mobile Emulators (Nox / BlueStacks)">
+            <svg class="tool-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="12" rx="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="15" x2="12" y2="21" />
+              <rect x="9" y="5" width="6" height="8" rx="1" fill="rgba(var(--primary-rgb), 0.15)" stroke="var(--primary)" stroke-width="1.5" />
+              <circle cx="12" cy="11.5" r="0.5" fill="var(--primary)" />
+            </svg>
+            <span>Emulators (Nox/BlueStacks)</span>
+          </div>
+
+          <!-- 8. SQL / Databases -->
+          <div class="tool-item" title="SQL / MySQL Databases">
+            <svg class="tool-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3" />
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+              <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" />
+            </svg>
+            <span>SQL / Databases</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Projects Showcase Section -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header align-center">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Real-world automation suites, manual testing reports, and API verification</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="automation">Automation</button>
+          <button class="filter-btn" data-filter="api">API Testing</button>
+          <button class="filter-btn" data-filter="manual">Manual Testing</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project 1: SauceDemo Playwright Framework -->
+          <div class="project-card card" data-category="automation">
+            <div class="project-card-image">
+              <div class="project-image-placeholder">
+                <i data-lucide="test-tube-2"></i>
+                <span>Automation Framework</span>
+              </div>
+              <div class="project-badge">Automation</div>
+            </div>
+            <div class="project-card-content">
+              <h3>SauceDemo Automation Framework</h3>
+              <p class="project-desc">A production-ready test automation framework using Playwright and TypeScript for the SauceDemo ecommerce app. Implements Page Object Model (POM).</p>
+              <div class="project-features-list">
+                <strong>Responsibilities:</strong>
+                <ul>
+                  <li>Designed Page Objects for cart, login, and checkout.</li>
+                  <li>Integrated Git actions CI and generated HTML report dashboard.</li>
+                </ul>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">Playwright</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">POM</span>
+                <span class="tech-tag">CI/CD</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/rana-samiuddin" target="_blank" class="project-link-btn">
+                  <i data-lucide="github"></i> View GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: E-Commerce Web App Testing -->
+          <div class="project-card card" data-category="manual">
+            <div class="project-card-image">
+              <div class="project-image-placeholder">
+                <i data-lucide="shopping-cart"></i>
+                <span>E-Commerce QA Sweep</span>
+              </div>
+              <div class="project-badge">Manual Testing</div>
+            </div>
+            <div class="project-card-content">
+              <h3>E-Commerce Web Application Testing</h3>
+              <p class="project-desc">End-to-end manual QA validation of a multi-vendor online shop. Covered UI validation, cross-browser responsive testing, and transactional flows.</p>
+              <div class="project-features-list">
+                <strong>Responsibilities:</strong>
+                <ul>
+                  <li>Wrote 150+ detailed test cases mapped in RTM.</li>
+                  <li>Logged and tracked 35 blockers and UI defects inside Jira.</li>
+                </ul>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">Manual Testing</span>
+                <span class="tech-tag">Jira</span>
+                <span class="tech-tag">RTM Matrix</span>
+                <span class="tech-tag">UI Testing</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/rana-samiuddin" target="_blank" class="project-link-btn">
+                  <i data-lucide="file-text"></i> Test Plan Docs
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: API Testing & Mocking Suite -->
+          <div class="project-card card" data-category="api">
+            <div class="project-card-image">
+              <div class="project-image-placeholder">
+                <i data-lucide="webhook"></i>
+                <span>REST API Postman Suite</span>
+              </div>
+              <div class="project-badge">API Testing</div>
+            </div>
+            <div class="project-card-content">
+              <h3>API Validation & Testing Suite</h3>
+              <p class="project-desc">Comprehensive test coverage for REST API web endpoints. Validates server response headers, JSON payloads, HTTP statuses, schema conformity, and rate limits.</p>
+              <div class="project-features-list">
+                <strong>Responsibilities:</strong>
+                <ul>
+                  <li>Constructed reusable Postman collections with pre-request scripts.</li>
+                  <li>Implemented API assertions for status codes, latency, and schemas.</li>
+                </ul>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">Postman</span>
+                <span class="tech-tag">REST APIs</span>
+                <span class="tech-tag">JSON Schema</span>
+                <span class="tech-tag">Newman</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/rana-samiuddin" target="_blank" class="project-link-btn">
+                  <i data-lucide="github"></i> API Collection
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Full QA Bug Hunt Portfolio -->
+          <div class="project-card card" data-category="manual">
+            <div class="project-card-image">
+              <div class="project-image-placeholder">
+                <i data-lucide="bug-play"></i>
+                <span>QA Audit & Bug Logs</span>
+              </div>
+              <div class="project-badge">Manual Testing</div>
+            </div>
+            <div class="project-card-content">
+              <h3>Comprehensive Manual Testing Project</h3>
+              <p class="project-desc">A deep-dive QA audit project including Smoke, Regression, and Sanity sweeps. Demonstrates structured bug reports with step-by-step reproduction steps.</p>
+              <div class="project-features-list">
+                <strong>Responsibilities:</strong>
+                <ul>
+                  <li>Executed exhaustive functional validation sweeps.</li>
+                  <li>Constructed high-fidelity bug logs with logs and expected results.</li>
+                </ul>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">Smoke Testing</span>
+                <span class="tech-tag">Sanity Audit</span>
+                <span class="tech-tag">Bug Logs</span>
+                <span class="tech-tag">Trello / Jira</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/rana-samiuddin" target="_blank" class="project-link-btn">
+                  <i data-lucide="file-check"></i> Bug Reports
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Education & Boot camp Section -->
+    <section class="section education-section">
+      <div class="container">
+        <div class="section-header align-center">
+          <h2 class="section-title">Education & Courses</h2>
+          <p class="section-subtitle">Academic qualifications and specialized training</p>
+        </div>
+
+        <div class="education-grid">
+          <!-- Degree Card -->
+          <div class="edu-card card">
+            <div class="edu-icon-wrapper text-gradient-bg">
+              <i data-lucide="graduation-cap"></i>
+            </div>
+            <span class="edu-date">Oct 2020 – Jan 2025</span>
+            <h3>Bachelors in Science Software Engineering</h3>
+            <h4 class="edu-institute">Iqra University EDC Campus, Karachi</h4>
+            <p class="edu-details">Studied foundations of software construction, databases, web design, OOP, and software quality management processes.</p>
+          </div>
+
+          <!-- School Card -->
+          <div class="edu-card card">
+            <div class="edu-icon-wrapper text-gradient-bg">
+              <i data-lucide="award"></i>
+            </div>
+            <span class="edu-date">Jul 2018 – Aug 2020</span>
+            <h3>Higher Secondary School Certificate</h3>
+            <h4 class="edu-institute">Army Public College Faisal, Karachi</h4>
+            <p class="edu-details">Completed core pre-engineering education focusing on advanced mathematics, physics, and computer science concepts.</p>
+          </div>
+
+          <!-- Boot camp Card -->
+          <div class="edu-card card full-width">
+            <div class="edu-icon-wrapper text-gradient-bg">
+              <i data-lucide="book-open"></i>
+            </div>
+            <span class="edu-date">Ongoing</span>
+            <h3>Software Automation Testing Boot camp</h3>
+            <h4 class="edu-institute">Iqra University EDC Campus</h4>
+            <div class="bootcamp-details">
+              <p>An intensive SQA specialization program expanding expertise in automated QA engineering:</p>
+              <ul class="bootcamp-bullets">
+                <li><strong>Manual & QA Process:</strong> Test case writing, traceability matrix design, defect lifecycle, and testing metrics.</li>
+                <li><strong>Automation Engine:</strong> Building test automation pipelines in C# using Selenium WebDriver, NUnit, and BDD (SpecFlow).</li>
+                <li><strong>API & Load testing:</strong> Writing API assertion scripts in Postman and running JMeter performance test suites.</li>
+                <li><strong>CI/CD Pipelines:</strong> Incorporating automated testing jobs into Git version control pipelines.</li>
+                <li><strong>Agile Methodologies:</strong> Working in mock sprints, attending stand-ups, retro reviews, and estimation boards.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Certifications Section -->
+    <section class="section certifications-section">
+      <div class="container">
+        <div class="section-header align-center">
+          <h2 class="section-title">Certifications</h2>
+          <p class="section-subtitle">Verified professional credentials in software testing and databases</p>
+        </div>
+
+        <div class="certifications-grid">
+          <!-- Cert 1 -->
+          <div class="cert-card card">
+            <div class="cert-status-badge"><i data-lucide="shield-check"></i> VERIFIED</div>
+            <div class="cert-content">
+              <h3>SQL and Relational Databases 101</h3>
+              <p class="cert-issuer">IBM Skills Network</p>
+              <p class="cert-description">Validates core knowledge of relational databases, designing SQL queries, using joins, and database structure administration.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-date">Credential Placeholder ID: IBM-SQL-101</span>
+            </div>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="cert-card card">
+            <div class="cert-status-badge"><i data-lucide="clock"></i> PENDING</div>
+            <div class="cert-content">
+              <h3>Playwright Automation Specialist</h3>
+              <p class="cert-issuer">Udemy / Automation Academy</p>
+              <p class="cert-description">In-depth training on modern web end-to-end browser automation, using TypeScript selectors, test configuration, and trace viewer execution.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-date">Estimated Completion: August 2026</span>
+            </div>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="cert-card card">
+            <div class="cert-status-badge"><i data-lucide="clock"></i> PENDING</div>
+            <div class="cert-content">
+              <h3>ISTQB Certified Tester (Foundation Level)</h3>
+              <p class="cert-issuer">ISTQB Board</p>
+              <p class="cert-description">Covers fundamental principles of software testing, testing throughout the SDLC, static testing, test design techniques, and test tools.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-date">Preparation in Progress</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Testimonials Section -->
+    <section class="section testimonials-section">
+      <div class="container">
+        <div class="section-header align-center">
+          <h2 class="section-title">Peer Testimonials</h2>
+          <p class="section-subtitle">What developers and QA peers say about collaborating with me</p>
+        </div>
+
+        <div class="testimonials-slider">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card card">
+            <p class="testimonial-quote">
+              "Rana has a keen eye for detail. His smoke and regression test cycles at Tafsol Pvt Ltd consistently caught blocking issues early. He logs very clean, detailed steps in Jira, which makes reproducing and fixing bugs a breeze for the development team."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar text-gradient-bg">FS</div>
+              <div>
+                <h4>Fahad Siddiqui</h4>
+                <p>Senior Full-Stack Developer</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card card">
+            <p class="testimonial-quote">
+              "During our time working on web app verification, Rana's collaborative attitude was excellent. He quickly picks up new tools like Playwright and takes full ownership of writing manual test cases. Highly recommended for any active QA team."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar text-gradient-bg">AM</div>
+              <div>
+                <h4>Ayesha Malik</h4>
+                <p>QA Automation Lead</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact-container">
+        <div class="contact-info">
+          <div class="section-header">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Let's discuss how I can help improve your product's release quality</p>
+          </div>
+          <p class="contact-info-text">
+            I am currently open to new roles and consulting opportunities as a Software Quality Assurance Engineer. Drop me an email, call directly, or connect through LinkedIn.
+          </p>
+
+          <div class="contact-details-list">
+            <div class="contact-detail-item">
+              <div class="contact-icon text-gradient-bg">
+                <i data-lucide="mail"></i>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:rana.samiuddin@gmail.com">rana.samiuddin@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon text-gradient-bg">
+                <i data-lucide="phone"></i>
+              </div>
+              <div>
+                <h4>Phone</h4>
+                <a href="tel:+923166369062">+92 316 6369062</a>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon text-gradient-bg">
+                <i data-lucide="map-pin"></i>
+              </div>
+              <div>
+                <h4>Location</h4>
+                <span>Karachi, Pakistan</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://linkedin.com/in/rana-samiuddin" target="_blank" aria-label="LinkedIn Profile"><i data-lucide="linkedin"></i></a>
+            <a href="https://github.com/rana-samiuddin" target="_blank" aria-label="GitHub Profile"><i data-lucide="github"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form-card card">
+          <form id="contact-form" onsubmit="handleContactSubmit(event)">
+            <div class="form-group">
+              <label for="form-name">Full Name</label>
+              <input type="text" id="form-name" placeholder="John Doe" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="form-email">Email Address</label>
+              <input type="email" id="form-email" placeholder="john@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-subject">Subject</label>
+              <input type="text" id="form-subject" placeholder="Project Inquiry / Job Opportunity" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" rows="5" placeholder="Hi Rana, we would like to interview you for..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="form-submit-btn">
+              <i data-lucide="send"></i> Send Message
+            </button>
+            <div class="form-feedback" id="form-feedback"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 13. Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="logo-code">&lt;</span>RS<span class="logo-text">.QA</span><span class="logo-code">/&gt;</span>
+        <p>Ensuring Software Integrity & Quality Assurance excellence.</p>
+      </div>
+      
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Rana Samiuddin. All Rights Reserved.</p>
+        <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to Top">
+          <i data-lucide="arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Print Specific Overlay Resume Layout -->
+  <!-- This is hidden in web view, but formatted for clean A4 printing (ATS resume) -->
+  <div class="print-resume-layout">
+    <div class="print-header">
+      <h1 class="print-name">RANA SAMIUDDIN</h1>
+      <h2 class="print-title">Jr. SQA Engineer</h2>
+      <div class="print-meta">
+        rana.samiuddin@gmail.com | LinkedIn | +92 316 6369062 | Karachi
+      </div>
+    </div>
+
+    <div class="print-section">
+      <h3 class="print-section-title">PROFILE SUMMARY</h3>
+      <p class="print-text">
+        Junior SQA Engineer with hands-on experience in functional and non-functional testing, supporting AI-driven features and data workflows while ensuring stable, high-quality software through strong SDLC knowledge and attention to detail.
+      </p>
+    </div>
+
+    <div class="print-section">
+      <h3 class="print-section-title">EXPERTISE & SKILLS</h3>
+      <table class="print-table">
+        <tr>
+          <td>• App (Android & iOS) & Web Testing</td>
+          <td>• API Testing (Postman)</td>
+        </tr>
+        <tr>
+          <td>• Agile & Project Management (Scrum)</td>
+          <td>• JIRA / Azure DevOps</td>
+        </tr>
+        <tr>
+          <td>• JMeter Performance Testing</td>
+          <td>• SQL / MySQL Querying</td>
+        </tr>
+        <tr>
+          <td>• Bug Reporting & Tracking</td>
+          <td>• Functional & Regression Testing</td>
+        </tr>
+        <tr>
+          <td>• Manual & Automation Testing</td>
+          <td>• Playwright / Selenium (Basic)</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="print-section">
+      <h3 class="print-section-title">EXPERIENCE</h3>
+      <div class="print-exp-item">
+        <div class="print-exp-header">
+          <strong>TAFSOL PVT LTD.</strong>
+          <span>AUG 2025 – PRESENT</span>
+        </div>
+        <div class="print-exp-sub">Associate SQA Engineer</div>
+        <ul class="print-list">
+          <li>Continuously working on enhancing application quality by about 20% through in-depth functional and non-functional testing.</li>
+          <li>Consistently achieving around 95% stability in builds by catching issues early in the development cycle.</li>
+          <li>Actively carrying out detailed testing across mobile and web platforms, including UI, admin, and vendor environments.</li>
+          <li>Regularly designing and executing complete end-to-end test scenarios for Android, iOS, and web to maintain performance and reliability.</li>
+          <li>Closely collaborating with developers to resolve bugs faster, helping streamline release cycles and improve user experience.</li>
+          <li>Ongoing management of QA activities across multiple projects, increasing test coverage and keeping production defects to a minimum.</li>
+        </ul>
+      </div>
+
+      <div class="print-exp-item">
+        <div class="print-exp-header">
+          <strong>MMC</strong>
+          <span>MAR 2025 – JUL 2025</span>
+        </div>
+        <div class="print-exp-sub">SQA Analyst</div>
+        <ul class="print-list">
+          <li>Improved application quality by 20% through thorough functional and non-functional testing.</li>
+          <li>Achieved 95% success in delivering stable builds by identifying issues early in the SDLC.</li>
+          <li>Conducted detailed testing across mobile and web platforms, including UI, admin, and vendor portals.</li>
+          <li>Designed and executed end-to-end test cases for Android, iOS, and web to ensure performance and consistency.</li>
+          <li>Collaborated with developers to resolve bugs quickly, enhancing release cycles and user satisfaction.</li>
+          <li>Managed QA efforts across projects, boosted test coverage, and minimized production defects.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="print-section">
+      <div class="print-split-container">
+        <div class="print-split-column">
+          <h3 class="print-section-title">EDUCATION</h3>
+          <div class="print-edu-item">
+            <strong>Bachelors in Science Software Engineering</strong><br>
+            Iqra University EDC Campus, Karachi<br>
+            <span class="print-edu-date">OCT 2020 – JAN 2025</span>
+          </div>
+          <div class="print-edu-item" style="margin-top: 8px;">
+            <strong>Higher Secondary School Certificate</strong><br>
+            Army Public College Faisal, Karachi<br>
+            <span class="print-edu-date">JUL 2018 – AUG 2020</span>
+          </div>
+        </div>
+
+        <div class="print-split-column">
+          <h3 class="print-section-title">COURSE & BOOTCAMP</h3>
+          <div class="print-edu-item">
+            <strong>Software Automation Testing Boot camp (Ongoing)</strong><br>
+            Iqra University EDC Campus
+            <ul class="print-list compact">
+              <li>Manual testing, test case design, and QA metrics.</li>
+              <li>Automation using C#, Selenium, NUnit, SpecFlow BDD.</li>
+              <li>API Testing with Postman & JMeter performance testing.</li>
+              <li>Agile/Scrum framework integration & CI/CD.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- GSAP Animation Engine CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js?v=1.5"></script>
+</body>
+</html>
