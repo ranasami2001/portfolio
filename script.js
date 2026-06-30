@@ -265,9 +265,10 @@ function setupProjectFilters() {
       const filterValue = btn.getAttribute('data-filter');
 
       projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
+        const categories = (card.getAttribute('data-category') || '').split(/\s+/).filter(Boolean);
+        const matchesFilter = filterValue === 'all' || categories.includes(filterValue);
         
-        if (filterValue === 'all' || category === filterValue) {
+        if (matchesFilter) {
           card.classList.remove('filtered-out');
           // Animate card entrance using GSAP if available
           if (typeof gsap !== 'undefined') {
