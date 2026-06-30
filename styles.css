@@ -184,10 +184,27 @@ ul {
 }
 
 /* --- 4. BUTTONS & UI COMPONENTS --- */
+.techstack-slider {
+  position: relative;
+}
+
 .techstack-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
   gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--primary-rgb), 0.45) transparent;
+}
+
+.techstack-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.techstack-grid::-webkit-scrollbar-thumb {
+  background: rgba(var(--primary-rgb), 0.45);
+  border-radius: 999px;
 }
 
 .techstack-card {
@@ -196,7 +213,10 @@ ul {
   display: flex;
   flex-direction: column;
   min-height: 260px;
+  min-width: min(100%, 280px);
+  flex: 0 0 min(100%, 280px);
   gap: 14px;
+  scroll-snap-align: start;
 }
 
 .techstack-card::before {
@@ -211,6 +231,27 @@ ul {
 
 .techstack-card:hover::before {
   opacity: 1;
+}
+
+.techstack-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding-bottom: 4px;
+}
+
+.techstack-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(var(--text-muted-rgb), 0.25);
+  transition: all var(--transition-fast);
+}
+
+.techstack-dot.active {
+  width: 24px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
 }
 
 .techstack-icon {
@@ -385,10 +426,48 @@ ul {
 .nav-logo {
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 1.5rem;
   letter-spacing: -0.02em;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: var(--surface-dark);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  box-shadow: 0 8px 24px rgba(74, 144, 226, 0.2);
+}
+
+.logo-brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.logo-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.logo-role {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 2px;
 }
 
 .logo-code {
@@ -1750,6 +1829,10 @@ ul {
   gap: 8px;
 }
 
+.footer-brand-logo {
+  margin-bottom: 2px;
+}
+
 .footer-brand p {
   font-size: 0.9rem;
   color: var(--text-muted);
@@ -1817,6 +1900,11 @@ ul {
   .hero-container, .about-container, .contact-container {
     grid-template-columns: 1fr;
     gap: 50px;
+  }
+
+  .techstack-card {
+    min-width: 260px;
+    flex-basis: 260px;
   }
   
   .hero-content {
@@ -1902,6 +1990,15 @@ ul {
 
   .section-title {
     font-size: 2rem;
+  }
+
+  .techstack-grid {
+    gap: 16px;
+  }
+
+  .techstack-card {
+    min-width: 240px;
+    flex-basis: 240px;
   }
 
   .tools-grid {

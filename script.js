@@ -252,6 +252,8 @@ function animateStats() {
 
 
 /* --- 4. PROJECTS FILTER SYSTEM --- */
+let isSubmitting = false;
+
 function setupProjectFilters() {
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
@@ -284,50 +286,81 @@ function setupProjectFilters() {
 
 
 /* --- 5. CONTACT FORM VALIDATION & HANDLING --- */
-function handleContactSubmit(event) {
+async function handleContactSubmit(event) {
   event.preventDefault();
-  
+
+  if (isSubmitting) return;
+
   const form = document.getElementById('contact-form');
   const submitBtn = document.getElementById('form-submit-btn');
   const feedback = document.getElementById('form-feedback');
-  
+
   const name = document.getElementById('form-name').value.trim();
   const email = document.getElementById('form-email').value.trim();
   const subject = document.getElementById('form-subject').value.trim();
   const message = document.getElementById('form-message').value.trim();
 
-  // Basic Validation Check
   if (!name || !email || !subject || !message) {
     feedback.textContent = '✖ Error: Please fill in all fields before submitting.';
     feedback.className = 'form-feedback error';
     return;
   }
 
-  // Disable button and show loader
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    feedback.textContent = '✖ Error: Please enter a valid email address.';
+    feedback.className = 'form-feedback error';
+    return;
+  }
+
+  isSubmitting = true;
   submitBtn.disabled = true;
-  submitBtn.innerHTML = `<i data-lucide="loader" class="animate-spin"></i> Submitting Test...`;
+  submitBtn.innerHTML = `<i data-lucide="loader" class="animate-spin"></i> Sending...`;
+  feedback.textContent = '';
+  feedback.className = 'form-feedback';
   if (typeof lucide !== 'undefined') lucide.createIcons();
 
-  // Simulate API post response (1.5 seconds)
-  setTimeout(() => {
-    feedback.textContent = '✓ Assertion Passed: Contact request received. I will reply shortly!';
+  try {
+    const fullMessage = `${message}\n\n---\nFull Name: ${name}\nEmail Address: ${email}\nSubject: ${subject}\nSubmitted At: ${new Date().toLocaleString()}`;
+
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        access_key: '4f2c3c89-876b-43ad-ae94-78b5cb9fdf9b',
+        recipient: 'rana.samiuddin@gmail.com',
+        from_name: name,
+        name,
+        email,
+        subject: 'New Portfolio Contact Form Submission',
+        message: fullMessage,
+        replyto: email
+      })
+    });
+
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      throw new Error(result.message || 'Unable to send your message right now.');
+    }
+
+    feedback.textContent = 'Thank you! Your message has been sent successfully.';
     feedback.className = 'form-feedback success';
-    
-    // Clear inputs
     form.reset();
-    
-    // Restore button state
+  } catch (error) {
+    console.error('Contact form submission failed:', error);
+    feedback.textContent = 'Sorry, we could not send your message right now. Please try again later or contact me directly.';
+    feedback.className = 'form-feedback error';
+  } finally {
+    isSubmitting = false;
     submitBtn.disabled = false;
     submitBtn.innerHTML = `<i data-lucide="send"></i> Send Message`;
     if (typeof lucide !== 'undefined') lucide.createIcons();
-
-    // Fade out notification after 6 seconds
-    setTimeout(() => {
-      feedback.textContent = '';
-      feedback.className = 'form-feedback';
-    }, 6000);
-
-  }, 1500);
+  }
 }
 
 

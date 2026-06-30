@@ -7,6 +7,8 @@
   <meta name="description" content="Portfolio of Rana Samiuddin, an experienced SQA Engineer specializing in Manual Testing, API Testing, Database Testing, and Automation Testing using Playwright, TypeScript, and Selenium.">
   <meta name="keywords" content="Rana Samiuddin, SQA Engineer, Software Quality Assurance, Automation Testing, Playwright, TypeScript, Manual Testing, Postman, API Testing, SQL, JIRA, QA Portfolio">
   <meta name="author" content="Rana Samiuddin">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -34,8 +36,12 @@
   <!-- Custom Navigation Bar -->
   <header class="navbar">
     <div class="nav-container">
-      <a href="#hero" class="nav-logo">
-        <span class="logo-code">&lt;</span>RS<span class="logo-text">.QA</span><span class="logo-code">/&gt;</span>
+      <a href="#hero" class="nav-logo" aria-label="Rana Samiuddin home">
+        <span class="logo-mark" aria-hidden="true">RS</span>
+        <span class="logo-brand">
+          <span class="logo-name">Rana Samiuddin</span>
+          <span class="logo-role">SQA Engineer</span>
+        </span>
       </a>
       
       <nav class="nav-links" id="nav-menu">
@@ -45,7 +51,7 @@
         <a href="#tech-stack" class="nav-link">Tech Stack</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#contact" class="nav-link">Contact</a>
-        <button class="btn btn-primary nav-cta-btn" onclick="window.print()">Print CV</button>
+        <button class="btn btn-primary nav-cta-btn" onclick="window.print()">Download Resume</button>
       </nav>
 
       <div class="nav-actions">
@@ -499,8 +505,9 @@
           <p class="section-subtitle">A professional overview of the technologies and frameworks I’ve worked with across web and software projects</p>
         </div>
 
-        <div class="techstack-grid">
-          <div class="techstack-card card">
+        <div class="techstack-slider">
+          <div class="techstack-grid">
+            <div class="techstack-card card">
             <div class="techstack-icon">
               <i data-lucide="globe-2"></i>
             </div>
@@ -569,6 +576,10 @@
               <span class="techstack-tag">CSS3</span>
               <span class="techstack-tag">JavaScript</span>
             </div>
+          </div>
+          <div class="techstack-dots" aria-label="Tech stack carousel pagination">
+            <span class="techstack-dot active"></span>
+            <span class="techstack-dot"></span>
           </div>
         </div>
       </div>
@@ -691,9 +702,9 @@
               <div class="project-badge">MERN</div>
             </div>
             <div class="project-card-content">
-              <h3>Mazadat</h3>
-              <p class="project-desc"><strong>Platforms:</strong> Website & Mobile App</p>
-              <p class="project-desc">A marketplace platform developed using the MERN stack. I was responsible for end-to-end QA activities including functional testing, regression testing, UI/UX validation, cross-browser testing, responsive testing, API verification, bug reporting, and production validation.</p>
+              <h3>Online Auction & Bidding Platform</h3>
+              <p class="project-desc"><strong>Project:</strong> Mazadat</p>
+              <p class="project-desc">A multi-role online auction platform with Merchant, User, and Admin portals. Merchants can create and manage auctions, while users can place bids in real time. Once an auction is won, the winner can securely complete the purchase using Stripe online payment.</p>
               <div class="project-features-list">
                 <strong>QA Responsibilities:</strong>
                 <ul>
@@ -722,9 +733,9 @@
               <div class="project-badge">MERN + AI</div>
             </div>
             <div class="project-card-content">
-              <h3>SamurAI</h3>
-              <p class="project-desc"><strong>Platforms:</strong> Website & Mobile App</p>
-              <p class="project-desc">An AI-powered recruitment platform that uses AI for CV parsing and candidate management. I performed manual testing, API testing, AI feature validation, CV parsing verification, regression testing, responsive testing, bug reporting, and release validation.</p>
+              <h3>AI-Powered Teacher Recruitment Platform</h3>
+              <p class="project-desc"><strong>Project:</strong> SamurAI</p>
+              <p class="project-desc">A recruitment platform designed specifically for teachers with multiple user roles including Teacher, HR Officer, HR Manager (School), and Admin. Teachers can register through the mobile application and use AI-powered CV parsing to automatically populate the registration stepper form.</p>
               <div class="project-features-list">
                 <strong>QA Responsibilities:</strong>
                 <ul>
@@ -753,9 +764,9 @@
               <div class="project-badge">MERN + AI</div>
             </div>
             <div class="project-card-content">
-              <h3>InvestFusion</h3>
-              <p class="project-desc"><strong>Platforms:</strong> Website</p>
-              <p class="project-desc">A modern real estate platform that allows users to explore property listings with comprehensive details, including pricing, location, amenities, specifications, images, and other essential property information. AI is used to extract and process data from multiple external APIs, presenting it in a unified and user-friendly interface.</p>
+              <h3>Real Estate Property Listing Platform</h3>
+              <p class="project-desc"><strong>Project:</strong> InvestFusion</p>
+              <p class="project-desc">A property listing platform with End User and Admin roles. Users can browse detailed property listings, including pricing, specifications, images, and other relevant information, while administrators manage properties and platform content.</p>
               <div class="project-features-list">
                 <strong>QA Responsibilities:</strong>
                 <ul>
@@ -788,9 +799,9 @@
               <div class="project-badge">MERN</div>
             </div>
             <div class="project-card-content">
-              <h3>Hua Hin Eats</h3>
-              <p class="project-desc"><strong>Platforms:</strong> Website & Mobile App</p>
-              <p class="project-desc">A food ordering and restaurant management platform built using the MERN stack. My responsibilities included functional testing, UI testing, responsive testing, API testing, order flow validation, payment flow testing, regression testing, and bug tracking.</p>
+              <h3>Food Ordering & Delivery Management System</h3>
+              <p class="project-desc"><strong>Project:</strong> Hua Hin Eats</p>
+              <p class="project-desc">A complete food ordering and delivery platform with multiple user roles including User, Rider, Restaurant, and Admin. The platform manages restaurant listings, food ordering, delivery tracking, and administrative operations.</p>
               <div class="project-features-list">
                 <strong>QA Responsibilities:</strong>
                 <ul>
@@ -1012,24 +1023,28 @@
 
         <div class="contact-form-card card">
           <form id="contact-form" onsubmit="handleContactSubmit(event)">
+            <input type="hidden" name="access_key" value="4f2c3c89-876b-43ad-ae94-78b5cb9fdf9b">
+            <input type="hidden" name="from_name" value="Portfolio Contact Form">
+            <input type="hidden" name="botcheck" value="">
+
             <div class="form-group">
               <label for="form-name">Full Name</label>
-              <input type="text" id="form-name" placeholder="John Doe" required>
+              <input type="text" id="form-name" name="name" placeholder="John Doe" required>
             </div>
             
             <div class="form-group">
               <label for="form-email">Email Address</label>
-              <input type="email" id="form-email" placeholder="john@example.com" required>
+              <input type="email" id="form-email" name="email" placeholder="john@example.com" required>
             </div>
 
             <div class="form-group">
               <label for="form-subject">Subject</label>
-              <input type="text" id="form-subject" placeholder="Project Inquiry / Job Opportunity" required>
+              <input type="text" id="form-subject" name="subject" placeholder="Project Inquiry / Job Opportunity" required>
             </div>
 
             <div class="form-group">
               <label for="form-message">Message</label>
-              <textarea id="form-message" rows="5" placeholder="Hi Rana, we would like to interview you for..." required></textarea>
+              <textarea id="form-message" name="message" rows="5" placeholder="Hi Rana, we would like to interview you for..." required></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary btn-full" id="form-submit-btn">
@@ -1046,7 +1061,13 @@
   <footer class="footer">
     <div class="container footer-container">
       <div class="footer-brand">
-        <span class="logo-code">&lt;</span>RS<span class="logo-text">.QA</span><span class="logo-code">/&gt;</span>
+        <div class="nav-logo footer-brand-logo">
+          <span class="logo-mark" aria-hidden="true">RS</span>
+          <span class="logo-brand">
+            <span class="logo-name">Rana Samiuddin</span>
+            <span class="logo-role">SQA Engineer</span>
+          </span>
+        </div>
         <p>Ensuring Software Integrity & Quality Assurance excellence.</p>
       </div>
       
