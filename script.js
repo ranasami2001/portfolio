@@ -82,6 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Project Filters
   setupProjectFilters();
 
+  // Initialize Tech Stack Carousel
+  setupTechStackCarousel();
+
   // Initialize GSAP Animations
   setupGSAPAnimations();
 });
@@ -282,6 +285,190 @@ function setupProjectFilters() {
       });
     });
   });
+}
+
+function setupTechStackCarousel() {
+  const slider = document.querySelector('.techstack-slider');
+  const viewport = slider?.querySelector('.techstack-viewport');
+  const track = slider?.querySelector('.techstack-track');
+  const originalSlides = Array.from(slider?.querySelectorAll('.techstack-slide') || []);
+  const dotsContainer = slider?.querySelector('.techstack-dots');
+
+  if (!slider || !viewport || !track || originalSlides.length === 0 || !dotsContainer) return;
+
+  const maxVisibleSlides = 4;
+  const cloneCount = maxVisibleSlides;
+  const slideGap = 24;
+  let currentIndex = cloneCount;
+  let startX = 0;
+  let currentOffset = 0;
+  let isDragging = false;
+  let autoplayTimer = null;
+  const originalSlideCount = originalSlides.length;
+
+  const cloneSlides = () => {
+    const headClones = originalSlides.slice(0, cloneCount).map(slide => slide.cloneNode(true));
+    const tailClones = originalSlides.slice(-cloneCount).map(slide => slide.cloneNode(true));
+
+    tailClones.forEach(clone => track.insertBefore(clone, track.firstChild));
+    headClones.forEach(clone => track.appendChild(clone));
+  };
+
+  cloneSlides();
+  const trackSlides = Array.from(track.children);
+
+  const getSlideWidth = () => trackSlides[0].getBoundingClientRect().width + slideGap;
+
+  const normalizeIndex = (index) => {
+    const position = index - cloneCount;
+    return ((position % originalSlideCount) + originalSlideCount) % originalSlideCount;
+  };
+
+  const isCloneBoundary = () => currentIndex < cloneCount || currentIndex >= cloneCount + originalSlideCount;
+
+  const updateDotState = () => {
+    const normalizedIndex = normalizeIndex(currentIndex);
+    dotsContainer.querySelectorAll('.techstack-dot').forEach((dot, index) => {
+      dot.classList.toggle('active', index === normalizedIndex);
+    });
+  };
+
+  const updateSlidePosition = (animate = true) => {
+    const offset = currentIndex * getSlideWidth();
+    track.style.transition = animate ? 'transform 0.45s ease-in-out' : 'none';
+    track.style.transform = `translateX(-${offset}px)`;
+    trackSlides.forEach((slide, index) => slide.classList.toggle('active', index === currentIndex));
+    updateDotState();
+  };
+
+  const resetPosition = () => {
+    const normalized = normalizeIndex(currentIndex);
+    currentIndex = cloneCount + normalized;
+    updateSlidePosition(false);
+  };
+
+  const goToSlide = (index) => {
+    currentIndex = cloneCount + ((index % originalSlideCount) + originalSlideCount) % originalSlideCount;
+    updateSlidePosition();
+  };
+
+  const nextSlide = () => {
+    currentIndex += 1;
+    updateSlidePosition();
+  };
+
+  const prevSlide = () => {
+    currentIndex -= 1;
+    updateSlidePosition();
+  };
+
+  const stopAutoplay = () => {
+    if (autoplayTimer) {
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
+  };
+
+  const startAutoplay = () => {
+    stopAutoplay();
+    autoplayTimer = setInterval(nextSlide, 4500);
+  };
+
+  const handleTransitionEnd = () => {
+    if (!isCloneBoundary()) return;
+    resetPosition();
+  };
+
+  const handleDragStart = (clientX) => {
+    isDragging = true;
+    startX = clientX;
+    currentOffset = currentIndex * getSlideWidth();
+    track.style.transition = 'none';
+  };
+
+  const handleDragMove = (clientX) => {
+    if (!isDragging) return;
+    const delta = clientX - startX;
+    track.style.transform = `translateX(-${currentOffset - delta}px)`;
+  };
+
+  const handleDragEnd = (clientX) => {
+    if (!isDragging) return;
+    isDragging = false;
+    const delta = clientX - startX;
+    const threshold = getSlideWidth() / 4;
+    track.style.transition = 'transform 0.45s ease-in-out';
+    if (delta > threshold) {
+      prevSlide();
+    } else if (delta < -threshold) {
+      nextSlide();
+    } else {
+      updateSlidePosition();
+    }
+  };
+
+  const handleResize = () => {
+    updateSlidePosition(false);
+  };
+
+  originalSlides.forEach((_, index) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'techstack-dot';
+    dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+    dot.addEventListener('click', () => goToSlide(index));
+    dotsContainer.appendChild(dot);
+  });
+
+  updateSlidePosition(false);
+  startAutoplay();
+
+  viewport.addEventListener('pointerdown', (event) => {
+    event.preventDefault();
+    viewport.classList.add('dragging');
+    handleDragStart(event.clientX);
+    viewport.setPointerCapture(event.pointerId);
+  });
+
+  document.addEventListener('pointermove', (event) => {
+    if (!isDragging) return;
+    handleDragMove(event.clientX);
+  });
+
+  const endDrag = (event) => {
+    if (!isDragging) return;
+    viewport.classList.remove('dragging');
+    handleDragEnd(event.clientX);
+  };
+
+  document.addEventListener('pointerup', endDrag);
+  document.addEventListener('pointercancel', endDrag);
+
+  viewport.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      nextSlide();
+    }
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      prevSlide();
+    }
+  });
+
+  viewport.addEventListener('mouseenter', stopAutoplay);
+  viewport.addEventListener('mouseleave', startAutoplay);
+  track.addEventListener('transitionend', handleTransitionEnd);
+  window.addEventListener('resize', handleResize);
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        slider.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.25 });
+
+  observer.observe(slider);
 }
 
 
