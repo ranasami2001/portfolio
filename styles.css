@@ -1202,6 +1202,28 @@ ul {
   padding-bottom: 14px;
 }
 
+/* Company logo and layout for experience items */
+.company-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.company-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--surface-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+}
+
 .job-title {
   font-size: 1.4rem;
   font-weight: 700;
