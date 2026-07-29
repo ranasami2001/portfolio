@@ -2001,11 +2001,6 @@ ul {
   width: 22px;
   height: 22px;
   display: block;
-  filter: invert(1) brightness(0.95);
-}
-
-.light-theme .footer-social-right a img {
-  filter: none;
 }
 
 .footer-brand {
