@@ -744,6 +744,7 @@ ul {
   flex-direction: column;
   gap: 4px;
 }
+
 .label-name {
   font-family: var(--font-heading);
   font-weight: 700;
@@ -1917,37 +1918,6 @@ ul {
   height: 18px;
 }
 
-/* Small link under location (e.g., LinkedIn) */
-.contact-location-links {
-  margin-top: 8px;
-  display: flex;
-  gap: 8px;
-}
-
-.contact-location-links a {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-color);
-  transition: all var(--transition-fast);
-}
-
-.contact-location-links a:hover {
-  color: var(--primary);
-  border-color: var(--primary);
-  background-color: rgba(var(--primary-rgb), 0.05);
-  transform: translateY(-2px);
-}
-
-.contact-location-links a svg {
-  width: 16px;
-  height: 16px;
-}
-
 /* Contact Form */
 .contact-form-card {
   padding: 40px;
@@ -2004,6 +1974,38 @@ ul {
   align-items: center;
   text-align: center;
   gap: 30px;
+}
+
+/* Footer bottom layout: copyright on left, icons + back-to-top on right */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 12px;
+}
+
+.footer-actions-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-social-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.footer-social-right a img {
+  width: 22px;
+  height: 22px;
+  display: block;
+  filter: invert(1) brightness(0.95);
+}
+
+.light-theme .footer-social-right a img {
+  filter: none;
 }
 
 .footer-brand {
