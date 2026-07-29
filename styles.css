@@ -744,7 +744,6 @@ ul {
   flex-direction: column;
   gap: 4px;
 }
-
 .label-name {
   font-family: var(--font-heading);
   font-weight: 700;
@@ -1916,6 +1915,37 @@ ul {
 .social-links a svg {
   width: 18px;
   height: 18px;
+}
+
+/* Small link under location (e.g., LinkedIn) */
+.contact-location-links {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.contact-location-links a {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  transition: all var(--transition-fast);
+}
+
+.contact-location-links a:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  background-color: rgba(var(--primary-rgb), 0.05);
+  transform: translateY(-2px);
+}
+
+.contact-location-links a svg {
+  width: 16px;
+  height: 16px;
 }
 
 /* Contact Form */
