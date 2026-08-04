@@ -1236,6 +1236,13 @@ ul {
   color: var(--text-muted);
 }
 
+.timeline-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
 .timeline-date {
   font-size: 0.9rem;
   font-weight: 600;
@@ -1245,8 +1252,11 @@ ul {
   border-radius: 100px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   border: 1px solid rgba(var(--primary-rgb), 0.15);
+  white-space: nowrap;
+  line-height: 1.4;
 }
 
 .job-duties {
@@ -1997,10 +2007,63 @@ ul {
   align-items: center;
 }
 
-.footer-social-right a img {
-  width: 22px;
-  height: 22px;
+.footer-social-right a {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 8px 20px rgba(2, 6, 23, 0.16);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+body.light-theme .footer-social-right a {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--border-color);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.footer-social-right a:hover,
+.footer-social-right a:focus-visible {
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.footer-social-right a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.footer-social-right .social-icon {
+  width: 20px;
+  height: 20px;
   display: block;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.footer-social-right a.linkedin:hover,
+.footer-social-right a.linkedin:focus-visible {
+  background: rgba(10, 102, 194, 0.14);
+  border-color: rgba(10, 102, 194, 0.24);
+  color: #0A66C2;
+  box-shadow: 0 12px 24px rgba(10, 102, 194, 0.2);
+}
+
+.footer-social-right a.github:hover,
+.footer-social-right a.github:focus-visible {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(30, 41, 59, 0.96));
+  border-color: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.25);
+}
+
+body.light-theme .footer-social-right a.github:hover,
+body.light-theme .footer-social-right a.github:focus-visible {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(30, 41, 59, 0.96));
 }
 
 .footer-brand {

@@ -79,6 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Stats Counters
   setupStatsCounters();
 
+  // Initialize Experience Durations
+  setupExperienceDurations();
+
   // Initialize Project Filters
   setupProjectFilters();
 
@@ -248,9 +251,42 @@ function animateStats() {
   };
 
   animateCounter('stat-years', 1.5, true);
-  animateCounter('stat-projects', 15, false);
+  animateCounter('stat-projects', 30, false);
   animateCounter('stat-cases', 5000, false);
-  animateCounter('stat-bugs', 250, false);
+  animateCounter('stat-bugs', 1500, false);
+}
+
+function setupExperienceDurations() {
+  const durationEls = document.querySelectorAll('.timeline-duration[data-start]');
+
+  durationEls.forEach((el) => {
+    const start = el.dataset.start;
+    const end = el.dataset.end || 'Present';
+
+    const startDate = new Date(`${start}-01`);
+    const endDate = end === 'Present' ? new Date() : new Date(`${end}-01`);
+
+    if (Number.isNaN(startDate.getTime()) || Number.isNaN(endDate.getTime())) {
+      el.textContent = 'Duration unavailable';
+      return;
+    }
+
+    let years = endDate.getFullYear() - startDate.getFullYear();
+    let months = endDate.getMonth() - startDate.getMonth();
+
+    if (months < 0) {
+      years -= 1;
+      months += 12;
+    }
+
+    if (years > 0 && months > 0) {
+      el.textContent = `${years} Year${years > 1 ? 's' : ''} ${months} mo`;
+    } else if (years > 0) {
+      el.textContent = `${years} Year${years > 1 ? 's' : ''}`;
+    } else {
+      el.textContent = `${months} Month${months > 1 ? 's' : ''}`;
+    }
+  });
 }
 
 
