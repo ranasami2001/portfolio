@@ -1361,9 +1361,9 @@ ul {
 /* --- 12. TOOLS & TECHNOLOGIES --- */
 .tools-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -2228,7 +2228,7 @@ body.light-theme .footer-social-right a.github:focus-visible {
   }
 
   .tools-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 
   .certifications-grid {
