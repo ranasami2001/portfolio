@@ -1,0 +1,29 @@
+# robots.txt - SEO Optimization for Google Crawling
+# Allow all crawlers to index the entire website
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /styles.css
+Allow: /script.js
+Allow: /assets/
+
+# Disallow private or sensitive paths (if any exist in the future)
+Disallow: /private/
+Disallow: /admin/
+
+# Crawl delay (optional - 0 means no delay)
+Crawl-delay: 0
+
+# Sitemap location
+Sitemap: https://sami-sqa.vercel.app/sitemap.xml
+
+# Allow Google, Bing, and other major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
