@@ -1751,26 +1751,39 @@ ul {
 .cert-status-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   align-self: flex-start;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
   margin-bottom: 16px;
-  background-color: var(--surface-dark);
-  border: 1px solid var(--border-color);
-  color: var(--text-muted);
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #000000;
+  box-shadow: 0 4px 12px rgba(14, 138, 230, 0.2);
 }
 
-.cert-status-badge svg {
-  width: 14px;
-  height: 14px;
+.cert-status-badge-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.cert-status-badge-progress-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
 }
 
 .cert-card:hover .cert-status-badge {
-  border-color: var(--primary);
-  color: var(--primary);
+  background: #ffffff;
+  border-color: rgba(255, 255, 255, 0.24);
+  color: #000000;
 }
 
 .cert-content h3 {
