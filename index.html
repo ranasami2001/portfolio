@@ -43,7 +43,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css?v=1.5">
+  <link rel="stylesheet" href="styles.css?v=1.6">
   
   <!-- SEO: JSON-LD Structured Data (Person Schema) -->
   <script type="application/ld+json">
@@ -773,9 +773,9 @@
 
         <!-- Filter Controls -->
         <div class="project-filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="websites">Websites</button>
-          <button class="filter-btn" data-filter="mobile-apps">Mobile Apps</button>
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="websites" aria-pressed="false">Websites</button>
+          <button class="filter-btn" data-filter="mobile-apps" aria-pressed="false">Mobile Apps</button>
         </div>
 
         <div class="projects-grid" id="projects-grid">
@@ -908,6 +908,12 @@
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="projects-cta">
+          <a href="projects.html" class="btn btn-secondary">
+            View All <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
     </section>
@@ -1224,6 +1230,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <!-- Custom JS -->
-  <script src="script.js?v=1.5"></script>
+  <script src="script.js?v=1.6"></script>
 </body>
 </html>

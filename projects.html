@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Rana Samiuddin</title>
+  <meta name="description" content="Explore Rana Samiuddin's quality assurance projects across web, mobile, AI, real estate, and food delivery platforms.">
+  <meta name="author" content="Rana Samiuddin">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sami-sqa.vercel.app/projects.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <meta name="theme-color" content="#010101">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=1.6">
+</head>
+<body class="dark-theme">
+  <div class="grid-background" id="grid-bg"></div>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html#hero" class="nav-logo" aria-label="Rana Samiuddin home">
+        <span class="logo-mark" aria-hidden="true">RS</span>
+        <span class="logo-brand">
+          <span class="logo-name">Rana Samiuddin</span>
+          <span class="logo-role">SQA Engineer</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="nav-menu">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#experience" class="nav-link">Experience</a>
+        <a href="index.html#skills" class="nav-link">Skills</a>
+        <a href="index.html#tech-stack" class="nav-link">Tech Stack</a>
+        <a href="projects.html" class="nav-link active" aria-current="page">Projects</a>
+        <a href="index.html#certifications" class="nav-link">Certifications</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-btn" aria-label="Toggle dark/light theme">
+          <i data-lucide="moon" class="icon-moon"></i>
+          <i data-lucide="sun" class="icon-sun"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle navigation menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section projects-page-section">
+      <div class="container">
+        <div class="section-header align-center projects-page-header">
+          <p class="projects-page-eyebrow">PORTFOLIO / SELECTED WORK</p>
+          <h1 class="section-title">Projects</h1>
+          <p class="section-subtitle">A closer look at products I've tested, the workflows behind them, and the quality assurance work that keeps them reliable.</p>
+          <a href="index.html#projects" class="btn btn-secondary projects-back-link">
+            <i data-lucide="arrow-left" aria-hidden="true"></i> Back to Featured Projects
+          </a>
+        </div>
+
+        <div class="project-filters" aria-label="Filter projects">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All Projects</button>
+          <button class="filter-btn" data-filter="websites" aria-pressed="false">Websites</button>
+          <button class="filter-btn" data-filter="mobile-apps" aria-pressed="false">Mobile Apps</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <div class="project-card card" data-category="websites mobile-apps">
+            <div class="project-card-image">
+              <div class="project-image-placeholder">
+                <i data-lucide="store"></i>
+                <span>Mazadat</span>
+              </div>
+              <div class="project-badge">MERN</div>
+            </div>
+            <div class="project-card-content">
+              <h2>Online Auction &amp; Bidding Platform</h2>
+              <p class="project-desc"><strong>Project:</strong> Mazadat</p>
+              <p class="project-desc">A multi-role online auction platform with Merchant, User, and Admin portals. Merchants can create and manage auctions, while users can place bids in real time. Once an auction is won, the winner can securely complete the purchase using Stripe online payment.</p>
+              <div class="project-features-list">
+                <strong>QA Responsibilities:</strong>
+                <ul>
+                  <li>Functional Testing</li>
+                  <li>Regression Testing</li>
+                  <li>UI/UX Validation</li>
+                  <li>Cross-Browser &amp; Responsive Testing</li>
+                  <li>API Verification</li>
+                  <li>Bug Reporting &amp; Production Validation</li>
+                </ul>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">MERN</span>
+                <span class="tech-tag">Functional QA</span>
+                <span class="tech-tag">API Testing</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card card" data-category="websites mobile-apps">
+            <div class="project-card-image">
+              <div class="project-image-placeholder">
+                <i data-lucide="brain-circuit"></i>
+                <span>SamurAI</span>
+              </div>
+              <div class="project-badge">MERN + AI</div>
+            </div>
+            <div class="project-card-content">
+              <h2>AI-Powered Teacher Recruitment Platform</h2>
+              <p class="project-desc"><strong>Project:</strong> SamurAI</p>
+              <p class="project-desc">A recruitment platform designed specifically for teachers with multiple user roles including Teacher, HR Officer, HR Manager (School), and Admin. Teachers can register through the mobile application and use AI-powered CV parsing to automatically populate the registration stepper form.</p>
+              <div class="project-features-list">
+                <strong>QA Responsibilities:</strong>
+                <ul>
+                  <li>Manual Testing</li>
+                  <li>API Testing</li>
+                  <li>AI Feature Validation</li>
+                  <li>CV Parsing Verification</li>
+                  <li>Regression &amp; Responsive Testing</li>
+                  <li>Bug Reporting &amp; Release Validation</li>
+                </ul>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">MERN + AI</span>
+                <span class="tech-tag">AI QA</span>
+                <span class="tech-tag">CV Parsing</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card card" data-category="websites">
+            <div class="project-card-image">
+              <div class="project-image-placeholder">
+                <i data-lucide="building-2"></i>
+                <span>InvestFusion</span>
+              </div>
+              <div class="project-badge">MERN + AI</div>
+            </div>
+            <div class="project-card-content">
+              <h2>Real Estate Property Listing Platform</h2>
+              <p class="project-desc"><strong>Project:</strong> InvestFusion</p>
+              <p class="project-desc">A property listing platform with End User and Admin roles. Users can browse detailed property listings, including pricing, specifications, images, and other relevant information, while administrators manage properties and platform content.</p>
+              <div class="project-features-list">
+                <strong>QA Responsibilities:</strong>
+                <ul>
+                  <li>Functional Testing</li>
+                  <li>UI/UX Testing</li>
+                  <li>API Testing</li>
+                  <li>AI Data Validation</li>
+                  <li>Property Listing Verification</li>
+                  <li>Search &amp; Filter Testing</li>
+                  <li>Regression Testing</li>
+                  <li>Cross-Browser &amp; Responsive Testing</li>
+                  <li>Bug Reporting &amp; Tracking</li>
+                  <li>Production Validation</li>
+                </ul>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">MERN + AI</span>
+                <span class="tech-tag">Real Estate</span>
+                <span class="tech-tag">AI Data QA</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card card" data-category="websites mobile-apps">
+            <div class="project-card-image">
+              <div class="project-image-placeholder">
+                <i data-lucide="utensils-crossed"></i>
+                <span>Hua Hin Eats</span>
+              </div>
+              <div class="project-badge">MERN</div>
+            </div>
+            <div class="project-card-content">
+              <h2>Food Ordering &amp; Delivery Management System</h2>
+              <p class="project-desc"><strong>Project:</strong> Hua Hin Eats</p>
+              <p class="project-desc">A complete food ordering and delivery platform with multiple user roles including User, Rider, Restaurant, and Admin. The platform manages restaurant listings, food ordering, delivery tracking, and administrative operations.</p>
+              <div class="project-features-list">
+                <strong>QA Responsibilities:</strong>
+                <ul>
+                  <li>Functional Testing</li>
+                  <li>UI Testing</li>
+                  <li>Responsive Testing</li>
+                  <li>API Testing</li>
+                  <li>Order Flow Validation</li>
+                  <li>Payment Flow Testing</li>
+                  <li>Regression Testing</li>
+                  <li>Bug Tracking</li>
+                </ul>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">MERN</span>
+                <span class="tech-tag">Food Delivery</span>
+                <span class="tech-tag">Payment QA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="index.html#hero" class="nav-logo footer-brand-logo" aria-label="Rana Samiuddin home">
+          <span class="logo-mark" aria-hidden="true">RS</span>
+          <span class="logo-brand">
+            <span class="logo-name">Rana Samiuddin</span>
+            <span class="logo-role">SQA Engineer</span>
+          </span>
+        </a>
+        <p>Ensuring Software Integrity &amp; Quality Assurance excellence.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Rana Samiuddin. All Rights Reserved.</p>
+        <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to Top">
+          <i data-lucide="arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js?v=1.6"></script>
+</body>
+</html>

@@ -230,6 +230,7 @@ ul {
   overflow: hidden;
   position: relative;
   width: 100%;
+  padding: 8px 12px;
   cursor: grab;
   user-select: none;
 }
@@ -1467,6 +1468,63 @@ ul {
   gap: 30px;
 }
 
+.projects-page-section {
+  min-height: calc(100vh - var(--navbar-height));
+  padding-top: calc(var(--navbar-height) + 60px);
+}
+
+.projects-page-header {
+  margin-bottom: 48px;
+}
+
+.projects-page-eyebrow {
+  margin-bottom: 12px;
+  color: var(--primary);
+  font-family: var(--font-code);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+.projects-back-link {
+  margin-top: 24px;
+}
+
+.projects-back-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+.projects-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.projects-cta .btn {
+  border: 1px solid rgba(var(--primary-rgb), 0.45);
+  border-radius: 100px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: var(--text-inverse);
+  font-weight: 700;
+  box-shadow: var(--glow-primary);
+}
+
+.projects-cta .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(var(--primary-rgb), 0.3);
+}
+
+.projects-cta .btn svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-fast);
+}
+
+.projects-cta .btn:hover svg {
+  transform: translate(2px, -2px);
+}
+
 .project-card {
   display: flex;
   flex-direction: column;
@@ -1532,6 +1590,7 @@ ul {
   flex-grow: 1;
 }
 
+.project-card-content h2,
 .project-card-content h3 {
   font-size: 1.3rem;
   margin-bottom: 12px;
@@ -2350,4 +2409,3 @@ body.light-theme .footer-social-right a.github:focus-visible {
     margin-left: 0;
   }
 }
-

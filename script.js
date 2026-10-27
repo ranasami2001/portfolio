@@ -300,8 +300,12 @@ function setupProjectFilters() {
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       // Toggle active classes
-      filterButtons.forEach(b => b.classList.remove('active'));
+      filterButtons.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
       btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
 
       const filterValue = btn.getAttribute('data-filter');
 
@@ -593,6 +597,7 @@ function setupGSAPAnimations() {
     console.warn('GSAP or ScrollTrigger CDNs are not available. Skipping entrance animations.');
     return;
   }
+  if (!document.querySelector('.hero-section')) return;
 
   // Register ScrollTrigger Plugin
   gsap.registerPlugin(ScrollTrigger);
